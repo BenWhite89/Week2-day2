@@ -15,15 +15,12 @@ $(document).ready(function() {
     });
     this.dblClick = $(`#${index}`).dblclick( function() {
       var diceIndex = searchIndex(index,diceArray);
-      console.log(diceArray);
       if (index === 0) {
         $(`#0`).remove();
         diceArray.splice(0, 1);
-        console.log(diceArray);
       } else {
         $(`#${index}`).remove();
         diceArray.splice(diceIndex, 1);
-        console.log(diceArray);
       }
     });
   };
@@ -68,7 +65,6 @@ $(document).ready(function() {
       
         sumDice = sumDice + diceArray[i].value;
     };
-    console.log(diceArray);
     alert(sumDice);    
   })
 
